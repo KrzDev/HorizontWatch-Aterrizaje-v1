@@ -1,0 +1,249 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <link rel="stylesheet" href="styles2.css">
+    <script src="https://kit.fontawesome.com/02360199a1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                
+                
+
+    <title>Aterrizaje</title>
+    </head>
+<body>
+    <div class="padre">
+        <header class="header">
+            <div class="menu">
+                <div class="logo">
+                    <a href="aterrizaje.html"><img src="LogoHorizont.png"></a>
+                </div>
+                <nav class="nav"></nav>
+                <div class="iconos">
+                    <a href="#"><i class="fa-solid fa-house"></i></a>
+                    <a href="#"><i class="fa-solid fa-user"></i></a>
+                </div>
+            </div>    
+        </header>
+
+        <div class="panel">
+            <div class="controlador">
+                <h3>Controlador de Indicadores</h3>
+                <h5>Listado de Indicadores para Aterrizajes:</h5>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Información Meterólogica
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Coordinación
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Datos de Vuelo
+                    </label>
+                  </div>
+                  <h5>Planificación de Rutas:</h5>
+                  
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Rutas de Vuelo
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Niveles de Vuelo
+                    </label>
+                  </div>
+
+                  <h5>Aproximaciones:</h5>
+                  
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Posición de vuelo
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Numero de vuelo
+                      </label>
+                    </div>
+                
+                    <h5>Rodajes:</h5>
+                  
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Pista destino
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Numero de Vuelo
+                        </label>
+                      </div>
+    
+                
+                      <div class="button-container">
+                        <button type="button">Validar</button>
+                        <button type="button">Emergencias</button>
+                    </div>      
+            </div>
+            <section class="aterrizaje">
+                <div class="proximos-vuelos">
+                   <h4>Próximo Aterrizajes</h4>
+                  <button class="btn btn-primary proximo-info" type="button" id="agregarDiv">
+                      <span>1.AM 0691</span>
+                      <p>350</p>
+                      <div class="origen">Mexico</div>
+                  </button>
+                  <button class="btn btn-primary proximo-info" type="button">
+                    <span>1.AM 0691</span>
+                    <p>350</p>
+                    <div class="origen">Mexico</div>
+                  </button>
+                  
+                  <button class="btn btn-primary proximo-info" type="button">
+                    <span>1.AM 0691</span>
+                    <p>350</p>
+                    <div class="origen">Mexico</div>
+                  </button>
+                  
+
+                </div>
+                
+                <script>
+                  $(document).ready(function(){
+                    $('.proximo-info').click(function(){
+                        var nuevoDiv = $('<div class="nuevo-div"></div>');
+                        nuevoDiv.css({
+                            'width': $('.proximos-vuelos').width(),
+                            'height': $('.proximos-vuelos').height(),
+                            'background-color': 'red',
+                            'margin-left': '20px',
+                             // Ajusta el margen según sea necesario
+                        });
+                        $('.proximos-vuelos').after(nuevoDiv);
+                    });
+                });
+                
+              </script>
+                
+                <div class="table-container">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Vuelo</th>
+                                <th>Aerolínea</th>
+                                <th>Pista Disponibles</th>
+                                <th>Controles</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dato 1</td>
+                                <td>Dato 2</td>
+                                <td>
+                                  <select class="pistaSeleccion" name="pista">
+                                    <option class="opcion" value="">Pista 1</option>
+                                    <option class="opcion" value="" >Pista 2</option>
+                                    <option class="opcion" value="">Pista 3</option>
+                                    <option class="opcion" value="">Pista 4</option>
+                                </select>
+                                </td>
+                                <td><i class="fa-brands fa-atlassian"></td>
+                            </tr>
+                            <tr>
+                                <td>Dato 5</td>
+                                <td>Dato 6</td>
+                                <td>         
+                                    <select class="pistaSeleccion" name="pista">
+                                      <option class="opcion" value="">Pista 1</option>
+                                      <option class="opcion" value="" >Pista 2</option>
+                                      <option class="opcion" value="">Pista 3</option>
+                                      <option class="opcion" value="">Pista 4</option>
+                                    </select>
+                                </td>
+                                <td><i class="fa-brands fa-atlassian"></td>
+                            </tr>
+                            <tr>
+                              <td>Dato 5</td>
+                              <td>Dato 6</td>
+                              <td>         
+                                  <select class="pistaSeleccion" name="pista">
+                                    <option class="opcion" value="">Pista 1</option>
+                                    <option class="opcion" value="" >Pista 2</option>
+                                    <option class="opcion" value="">Pista 3</option>
+                                    <option class="opcion" value="">Pista 4</option>
+                                  </select>
+                              </td>
+                              <td><i class="fa-brands fa-atlassian"></td>
+                          </tr>
+                          <tr>
+                            <td>Dato 5</td>
+                            <td>Dato 6</td>
+                            <td>         
+                                <select class="pistaSeleccion" name="pista">
+                                  <option class="opcion" value="">Pista 1</option>
+                                  <option class="opcion" value="" >Pista 2</option>
+                                  <option class="opcion" value="">Pista 3</option>
+                                  <option class="opcion" value="">Pista 4</option>
+                                </select>
+                            </td>
+                            <td><i class="fa-brands fa-atlassian"></i></td>
+                        </tr>
+                
+
+                            <!-- Agrega más filas según sea necesario -->
+                        </tbody>
+                    </table>
+                </div>
+
+                    
+                
+            </section>
+        </div>
+
+
+        
+        <footer class="footer">
+            <div class="pie">
+                <div class="menu-pie">
+                    <div class="logo-pie">
+                        <a href="aterrizaje.html"><img src="LogoHorizont.png"></a>
+                    </div>
+                    <nav class="nav-pie">
+                        
+                        <a href="#"><i class="fa-brands fa-square-instagram" style="color: #ffffff;"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-x-twitter" style="color: #ffffff;"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-whatsapp" style="color: #ffffff;"></i></a>      
+                    </nav>
+                    <div class="made">
+                        <p>2024-Todos los derechos reservados</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+        </footer>
+
+    </div>    
+    
+    
+</body>
+</html>

@@ -1,0 +1,317 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #041E36;
+    
+}
+
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+}
+
+.header{
+    /*background: #000;*/
+    display: flex;
+    flex-flow: column nowrap;
+    /*width: 70.31vm;*/
+
+}
+    .menu {
+        background: #041E36;
+        display: flex;
+        flex-flow: row nowrap;
+        height: 90px;
+        align-items: center;
+        justify-content: space-between;
+        
+        
+    }
+
+        .logo {
+            /*background: #FFC700;*/
+            flex: 0 1 auto; 
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            height: 90px; 
+        }
+
+        .logo img {
+            width: 150px; 
+            max-height: 100px; 
+            height: auto;
+        }
+
+
+    /*.nav{
+        background: #FFC700;
+        flex: 5 1 auto;
+        
+    }*/
+
+    .iconos{
+        
+        /*background: #FFC700;
+        /*flex: 1 1 auto;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
+        
+
+    }
+        .fa-solid{
+            color: white;
+            margin: 0 20px;
+            font-size: 24px;   
+            
+        }
+
+
+.panel{
+   
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    height: 500px;
+    
+}
+    .controlador {
+        flex: 40px;
+        background: #d6d9e4;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 480px;
+    }
+
+    /* Estilo para los elementos dentro de .controlador */
+    .controlador > * {
+        margin-bottom: 5px; /* Espaciado entre elementos */
+    }
+        .form-check-input,
+        .form-check-label {
+            margin: 0; /* Elimina el margen */
+            padding: 0; /* Elimina el relleno */
+            display: inline-block;
+            
+        }
+
+        .form-check {
+            display: flex;
+            align-items: center; /* Alinea los elementos verticalmente */
+            justify-content: flex-start;
+            
+            
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+           
+        }
+    
+        .button-container button {
+            flex: 1; /* Distribuye el espacio verticalmente entre los botones */
+            min-height: 50px; /* Altura mínima de los botones */
+            background-color: #041E36; /* Cambia el color de fondo a azul */
+            color: #fff; /* Cambia el color del texto a blanco */
+            
+            cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+            margin: 0; /* Elimina el margen alrededor de los botones */
+            border-radius: 10px; /* Radio de borde de 5px */
+        }
+    
+        .button-container button:hover {
+            background-color: #a0c5e7; /* Cambia el color de fondo a azul al pasar el mouse */
+        }
+        
+    
+
+    
+        
+
+    .aterrizaje{
+        flex: 60%;
+        /*background: #FFC374;*/
+        padding: 20px;
+        height: 480px;
+        border-radius: 10px;
+        align-self: flex-start;
+        
+        
+    }
+        .proximos-vuelos{
+            flex: 1 ;
+            max-width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #d6d9e4;
+            border-radius: 10px;
+            align-self: flex-start;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-top: -20px;
+        }
+
+            .proximo-info{
+                background: #FF5BAE;
+                margin: 10px auto; /* Margen vertical de 10px y centrado horizontal */
+                padding: 10px; /* Ajusta el padding para cambiar el tamaño */
+                display: flex;
+                justify-content: center; /* Centra el contenido horizontalmente */
+                align-items: center;
+                border-radius: 10px;                    
+
+            }
+            
+
+            .proximo-info span {
+                display: inline-block; /* Muestra el número de vuelo en una línea separada */
+                font-size: 18px;
+                margin-bottom: 5px;
+                margin-top: 5px; /* Tamaño de fuente para el número de vuelo */
+            }
+            
+            .proximo-info .origen {
+                margin-top: 5px; /* Espacio entre el número de vuelo y el origen */
+                font-size: 14px; /* Tamaño de fuente para el origen */
+            }
+            
+            .btn-primary {
+                background-color: #117fe6 !important; /* Color azul */
+                color: white; /* Color del texto en blanco */
+                border-color: #117fe6; /* Color del borde igual al color de fondo */
+                }
+
+        /*.asignacion{
+            background: #673F69;
+        }*/
+          
+            
+            .styled-table {
+                width: 100%;
+                border-collapse: collapse;
+                border-spacing: 0;
+                background-color: #d6d9e4;
+                
+                
+            }
+
+            .styled-table th,
+            .styled-table td {
+                padding: 8px;
+                border: 1px solid #041E36;
+                text-align: center;
+            }
+
+            .styled-table th {
+                background-color: #117fe6
+            }
+
+            /* Estilos para el contenedor de la tabla */
+            .table-container {
+                margin: 20px;
+                overflow-x: auto;
+            }
+
+            .pistaSeleccion{
+                border-radius: 10px;
+                color: blue;
+                padding: 5px;
+                width: 90%; /* Añade espacio interno para mejorar la apariencia */
+            
+            }
+
+            .opcion{
+                text-align: center;
+            }
+    
+
+        
+        
+        
+
+.footer{
+    /*background: #000;*/
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    
+    
+}
+    .pie{
+        background: #87A922;
+    }
+        
+        .menu-pie {
+            background: #041E36;
+            display: flex;
+            flex-flow: row nowrap;
+            height: 90px;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+
+            .logo-pie {
+                /*background: #FFC700;*/
+                flex: 0 1 auto; 
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                height: 90px; 
+            }
+
+            .logo-pie img {
+                width: 150px; 
+                max-height: 100px; 
+                height: auto;
+            }
+
+        .nav-pie{
+            /*background: #FFC700;*/
+            /*flex: 5 1 1;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90px;
+            
+        }
+            .fa-brands{
+                margin: 0 20px;
+                font-size: 24px;
+            }
+
+        
+    *.made{
+        /*background: #FFC700;*/
+        flex: 0 1  auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
+
+    }
+        .made p{
+            color: #fff;
+        }
+   
+        
+        
